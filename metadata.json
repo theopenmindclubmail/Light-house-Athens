@@ -1,0 +1,6 @@
+{
+  "name": "House of light! — Athens",
+  "description": "A sunlit architectural sanctuary in central Athens near Koukaki. Direct booking with host, zero platform fees, private rooftop, and dedicated remote workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

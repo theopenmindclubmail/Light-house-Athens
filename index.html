@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      /* Ensure window.fetch has both getter and setter to prevent chrome extension interceptor errors */
+      (function() {
+        try {
+          var _fetch = typeof window !== 'undefined' && window.fetch ? window.fetch.bind(window) : null;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(fn) {
+              _fetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {}
+
+        /* Intercept and suppress external extension errors */
+        window.addEventListener('error', function(e) {
+          if (e && (
+            (e.message && e.message.indexOf('fetch of #<Window>') !== -1) ||
+            (e.filename && e.filename.indexOf('chrome-extension://') !== -1)
+          )) {
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            if (e.preventDefault) e.preventDefault();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <title>House of light! — Athens</title>
+    <meta name="description" content="A sunlit architectural sanctuary in central Athens near Koukaki. Direct booking with host, zero platform fees, private rooftop, and dedicated remote workspace." />
+    <meta property="og:title" content="House of light! — Athens" />
+    <meta property="og:description" content="A sunlit architectural sanctuary in central Athens near Koukaki. Direct booking with host, zero platform fees, private rooftop, and dedicated remote workspace." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/src/assets/images/hero_athens_apartment_1792951051266.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="House of light! — Athens" />
+    <meta name="twitter:description" content="A sunlit architectural sanctuary in central Athens near Koukaki. Direct booking with host, zero platform fees, private rooftop, and dedicated remote workspace." />
+    <meta name="twitter:image" content="/src/assets/images/hero_athens_apartment_1792951051266.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,600..900;1,600..900&display=swap" rel="stylesheet">
+    <!-- Structured Data (Schema.org VacationRental) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VacationRental",
+      "name": "House of light! — Athens",
+      "description": "Sunlit architectural sanctuary in central Athens (Neos Kosmos / Koukaki). Dedicated workspace, private rooftop, artisan kitchen, high-speed fiber.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Athens",
+        "addressRegion": "Attica",
+        "addressCountry": "GR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9620,
+        "longitude": 23.7295
+      },
+      "priceRange": "€€",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "High-Speed Fiber WiFi 300+ Mbps", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Dedicated Ergonomic Workspace", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Private Rooftop Access", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Climate Control A/C & Heating", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Artisan Espresso Bar", "value": true}
+      ]
+    }
+    </script>
+  </head>
+  <body class="antialiased selection:bg-[#C5A880]/30 selection:text-current">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

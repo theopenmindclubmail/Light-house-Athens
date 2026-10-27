@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Phone,
-  MessageSquare,
   Copy,
   Check,
   Calendar,
@@ -9,7 +8,6 @@ import {
   ShieldCheck,
   Clock,
   Sparkles,
-  ExternalLink,
   Mail,
   Home,
   MapPin,
@@ -194,61 +192,82 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
 
               {/* Host Narrative Tabs */}
               <div className="mb-5">
-                <div className="flex items-center gap-1 p-1 rounded-md border text-xs mb-4 overflow-x-auto no-scrollbar border-inherit">
+                <div className="flex flex-col gap-1.5 mb-3">
                   <button
                     type="button"
                     onClick={() => setActiveHostTab('welcome')}
-                    className={`px-3 py-1.5 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                    className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all border ${
                       activeHostTab === 'welcome'
                         ? theme === 'dark'
-                          ? 'bg-[#D4AF37] text-[#0F0F11] font-semibold'
-                          : 'bg-[#1C1917] text-[#FAFAF9] font-semibold'
+                          ? 'bg-[#D4AF37] text-[#0F0F11] border-[#D4AF37] shadow-sm'
+                          : 'bg-[#1C1917] text-[#FAFAF9] border-[#1C1917] shadow-sm'
                         : theme === 'dark'
-                          ? 'text-[#A1A1AA] hover:text-white'
-                          : 'text-[#78716C] hover:text-[#1C1917]'
+                          ? 'bg-[#1A1A1E] text-[#A1A1AA] hover:text-white border-[#2E2E33] hover:border-[#3E3E44]'
+                          : 'bg-[#F9F8F6] text-[#78716C] hover:text-[#1C1917] border-[#E7E3D8] hover:border-[#D0C9B8]'
                     }`}
                   >
-                    <Home className="w-3.5 h-3.5" />
-                    <span>{t.tabAboutSpace}</span>
+                    <span className="flex items-center gap-2.5">
+                      <Home className="w-4 h-4 shrink-0" />
+                      <span>{t.tabAboutSpace}</span>
+                    </span>
+                    {activeHostTab === 'welcome' ? (
+                      <span className="w-2 h-2 rounded-full bg-current shrink-0" />
+                    ) : (
+                      <span className="text-[11px] opacity-40 font-mono">›</span>
+                    )}
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setActiveHostTab('space')}
-                    className={`px-3 py-1.5 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                    className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all border ${
                       activeHostTab === 'space'
                         ? theme === 'dark'
-                          ? 'bg-[#D4AF37] text-[#0F0F11] font-semibold'
-                          : 'bg-[#1C1917] text-[#FAFAF9] font-semibold'
+                          ? 'bg-[#D4AF37] text-[#0F0F11] border-[#D4AF37] shadow-sm'
+                          : 'bg-[#1C1917] text-[#FAFAF9] border-[#1C1917] shadow-sm'
                         : theme === 'dark'
-                          ? 'text-[#A1A1AA] hover:text-white'
-                          : 'text-[#78716C] hover:text-[#1C1917]'
+                          ? 'bg-[#1A1A1E] text-[#A1A1AA] hover:text-white border-[#2E2E33] hover:border-[#3E3E44]'
+                          : 'bg-[#F9F8F6] text-[#78716C] hover:text-[#1C1917] border-[#E7E3D8] hover:border-[#D0C9B8]'
                     }`}
                   >
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>{t.tabTheSpace}</span>
+                    <span className="flex items-center gap-2.5">
+                      <Sparkles className="w-4 h-4 shrink-0" />
+                      <span>{t.tabTheSpace}</span>
+                    </span>
+                    {activeHostTab === 'space' ? (
+                      <span className="w-2 h-2 rounded-full bg-current shrink-0" />
+                    ) : (
+                      <span className="text-[11px] opacity-40 font-mono">›</span>
+                    )}
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setActiveHostTab('location')}
-                    className={`px-3 py-1.5 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap transition-colors flex items-center gap-1.5 ${
+                    className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all border ${
                       activeHostTab === 'location'
                         ? theme === 'dark'
-                          ? 'bg-[#D4AF37] text-[#0F0F11] font-semibold'
-                          : 'bg-[#1C1917] text-[#FAFAF9] font-semibold'
+                          ? 'bg-[#D4AF37] text-[#0F0F11] border-[#D4AF37] shadow-sm'
+                          : 'bg-[#1C1917] text-[#FAFAF9] border-[#1C1917] shadow-sm'
                         : theme === 'dark'
-                          ? 'text-[#A1A1AA] hover:text-white'
-                          : 'text-[#78716C] hover:text-[#1C1917]'
+                          ? 'bg-[#1A1A1E] text-[#A1A1AA] hover:text-white border-[#2E2E33] hover:border-[#3E3E44]'
+                          : 'bg-[#F9F8F6] text-[#78716C] hover:text-[#1C1917] border-[#E7E3D8] hover:border-[#D0C9B8]'
                     }`}
                   >
-                    <Compass className="w-3.5 h-3.5" />
-                    <span>{t.tabLocationNotes}</span>
+                    <span className="flex items-center gap-2.5">
+                      <Compass className="w-4 h-4 shrink-0" />
+                      <span>{t.tabLocationNotes}</span>
+                    </span>
+                    {activeHostTab === 'location' ? (
+                      <span className="w-2 h-2 rounded-full bg-current shrink-0" />
+                    ) : (
+                      <span className="text-[11px] opacity-40 font-mono">›</span>
+                    )}
                   </button>
                 </div>
 
                 <div
-                  className={`p-4 rounded-md text-xs sm:text-sm leading-relaxed border ${
+                  className={`p-4 rounded-lg text-xs sm:text-sm leading-relaxed border shadow-xs transition-all ${
                     theme === 'dark'
                       ? 'bg-[#222226] border-[#2E2E33] text-stone-300'
                       : 'bg-white border-[#E7E3D8] text-stone-700'
@@ -327,19 +346,6 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
                       className="font-mono font-semibold text-current hover:underline truncate max-w-[210px]"
                     >
                       {PROPERTY_CONFIG.hostEmail}
-                    </a>
-                  </div>
-
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-stone-500 font-medium">Messenger - Facebook:</span>
-                    <a
-                      href={PROPERTY_CONFIG.hostMessengerUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold text-blue-500 hover:underline flex items-center gap-1"
-                    >
-                      <span>{PROPERTY_CONFIG.hostFacebook}</span>
-                      <ExternalLink className="w-3 h-3 opacity-70" />
                     </a>
                   </div>
                 </div>
@@ -621,22 +627,6 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
                     <span>{t.callButton}</span>
                   </a>
                 </div>
-
-                {/* Facebook Messenger button */}
-                <a
-                  href={PROPERTY_CONFIG.hostMessengerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 py-3 rounded-md text-xs font-semibold uppercase tracking-wider border transition-colors ${
-                    theme === 'dark'
-                      ? 'border-[#2E2E33] text-[#F4F4F5] hover:bg-[#222226]'
-                      : 'border-[#E7E3D8] text-[#1C1917] hover:bg-[#F5F2EB]'
-                  }`}
-                >
-                  <MessageSquare className="w-3.5 h-3.5 text-blue-500" />
-                  <span>Messenger / Facebook: {PROPERTY_CONFIG.hostFacebook}</span>
-                  <ExternalLink className="w-3 h-3 opacity-60 ml-1" />
-                </a>
 
                 <p className="text-[11px] text-center text-stone-500 mt-2">
                   {t.directContactNote}

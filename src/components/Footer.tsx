@@ -135,7 +135,6 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
               <p className="font-mono">Τηλ.: <a href={`tel:${PROPERTY_CONFIG.hostPhoneRaw}`} className="hover:underline">{PROPERTY_CONFIG.hostPhone}</a></p>
               <p className="font-mono">What’s app: <a href={`https://wa.me/${PROPERTY_CONFIG.hostWhatsapp}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-[#25D366]">{PROPERTY_CONFIG.hostWhatsappDisplay}</a></p>
               <p className="font-mono">Email: <a href={`mailto:${PROPERTY_CONFIG.hostEmail}`} className="hover:underline">{PROPERTY_CONFIG.hostEmail}</a></p>
-              <p>Facebook: <a href={PROPERTY_CONFIG.hostFacebookUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{PROPERTY_CONFIG.hostFacebook}</a></p>
             </div>
           </div>
         </div>

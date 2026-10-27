@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, theme, onOpenInquiry })
       {/* Background Photography with Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_athens_apartment_1792951051266.jpg"
+          src="/images/hero_athens_apartment.jpg"
           alt="House of light! Athenian apartment living room flooded with morning sunlight"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out"

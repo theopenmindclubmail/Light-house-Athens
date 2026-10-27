@@ -110,7 +110,7 @@ export const TheSpace: React.FC<TheSpaceProps> = ({ currentLang, theme }) => {
           <div className="lg:col-span-6">
             <div className="relative rounded-lg overflow-hidden shadow-xl aspect-[4/3] group">
               <img
-                src="/src/assets/images/living/living_brick_fireplace_main.jpg"
+                src="/images/living/_DSC4810.jpg"
                 alt="Living room in Athens with exposed brick wall, modern fireplace, and warm ambient light"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"

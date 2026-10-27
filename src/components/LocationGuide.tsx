@@ -190,7 +190,7 @@ export const LocationGuide: React.FC<LocationGuideProps> = ({ currentLang, theme
           <div className="lg:col-span-5">
             <div className="relative rounded-lg overflow-hidden shadow-xl aspect-[4/3] group">
               <img
-                src="/assets/images/acropolis_neos_kosmos_view.jpg"
+                src="/images/acropolis_neos_kosmos_view.jpg"
                 alt={t.acropolisCardAlt}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"

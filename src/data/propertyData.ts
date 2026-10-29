@@ -11,10 +11,8 @@ export const PROPERTY_CONFIG = {
   hostPhoneRaw: '+306939280209',
   hostPhoneSecondary: '+30 6944284314',
   hostPhoneSecondaryRaw: '+306944284314',
-  hostWhatsapp: '306939280209',
-  hostWhatsappDisplay: '6939280209',
-  hostWhatsappSecondary: '306944284314',
-  hostWhatsappSecondaryDisplay: '6944284314',
+  hostWhatsapp: '306944284314',
+  hostWhatsappDisplay: '6944284314',
   hostEmail: 'georgenitsopoulos@gmail.com',
   hostResponseTime: '< 1 hour',
   coordinates: {

@@ -27,6 +27,23 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const manosEmailBody = `Γεια σου Μάνο,
+
+ενδιαφέρομαι να με ενημερώσεις για την δημιουργία (παρόμοιας) ιστοσελίδας, τον χρόνο παράδοσης και το κόστος της.
+
+Ευχαριστώ, αναμένω επικοινωνία σου!
+
+
+Μια σημείωση από τον Μάνο:
+
+Το τηλέφωνο επικοινωνίας του είναι: +30 6934644010
+
+Μπορείς να του γράψεις και μιλάει τις εξής γλώσσες:
+
+Ελληνικά, Γερμανικά και Αγγλικά.
+Du kannst ihn schreiben und er spricht folgende Sprachen: Griechisch, Deutsch und Englisch.
+You can write to him, and he speaks the following languages: Greek, German, and English.`;
+
   return (
     <footer
       className={`border-t pb-24 lg:pb-12 pt-16 transition-colors ${
@@ -149,9 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
             <a
               href={`mailto:manosexperience@gmail.com?subject=${encodeURIComponent(
                 'Θέλω ενημέρωση για δημιουργία παρόμοιας ιστοσελίδας'
-              )}&body=${encodeURIComponent(
-                'Γεια σου Μάνο, ενδιαφέρομαι να με ενημερώσεις για την δημιουργία (παρόμοιας) ιστοσελίδας, τον χρόνο παράδοσης και το κόστος της. Ευχαριστώ, αναμένω επικοινωνία σου! Μπορείς να μου γράψεις και μιλάω τις εξής γλώσσες: Ελληνικά, Γερμανικά και Αγγλικά. Du kannst mir schreiben und ich spreche folgende Sprachen: Griechisch, Deutsch und Englisch. You can write to me, and I speak the following languages: Greek, German, and English.'
-              )}`}
+              )}&body=${encodeURIComponent(manosEmailBody)}`}
               className={`font-medium hover:underline underline-offset-2 transition-colors ${
                 theme === 'dark' ? 'text-[#D4AF37] hover:text-amber-200' : 'text-[#9E8058] hover:text-stone-900'
               }`}

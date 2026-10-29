@@ -19,8 +19,8 @@ export const StickyBottomBar: React.FC<StickyBottomBarProps> = ({
 
   const defaultWhatsappMsg = encodeURIComponent(
     currentLang === 'GR'
-      ? 'Γεια σας Nitsopa! Ενδιαφέρομαι για κράτηση στο House of light! στην Αθήνα.'
-      : 'Hello Nitsopa! I am interested in booking House of light! in Athens.'
+      ? 'Γεια σας NITSOPA 369! Ενδιαφέρομαι για κράτηση στο House of light! στην Αθήνα.'
+      : 'Hello NITSOPA 369! I am interested in booking House of light! in Athens.'
   );
 
   return (

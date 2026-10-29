@@ -61,7 +61,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
     (tGallery as Record<string, string>)[currentPhoto.descKey] || currentPhoto.descKey;
 
   const whatsappInquiryUrl = `https://wa.me/${PROPERTY_CONFIG.hostWhatsapp}?text=${encodeURIComponent(
-    `Hello Nitsopa! I was viewing the photo of "${photoTitle}" in House of light! and would love to check booking availability.`
+    `Hello NITSOPA 369! I was viewing the photo of "${photoTitle}" in House of light! and would love to check booking availability.`
   )}`;
 
   return (
@@ -141,7 +141,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
           className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#25D366] text-white font-medium hover:bg-[#20ba5a] transition-all whitespace-nowrap shrink-0 shadow-md text-xs uppercase tracking-wider"
         >
           <MessageSquare className="w-3.5 h-3.5" />
-          <span>Ask Nitsopa via WhatsApp</span>
+          <span>Ask NITSOPA 369 via WhatsApp</span>
         </a>
       </div>
     </div>

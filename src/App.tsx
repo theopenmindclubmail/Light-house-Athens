@@ -6,7 +6,6 @@ import { DirectPerks } from './components/DirectPerks';
 import { TheSpace } from './components/TheSpace';
 import { PhotoTour } from './components/PhotoTour';
 import { Amenities } from './components/Amenities';
-import { LocationGuide } from './components/LocationGuide';
 import { DirectBookingCard } from './components/DirectBookingCard';
 import { FAQ } from './components/FAQ';
 import { StickyBottomBar } from './components/StickyBottomBar';
@@ -114,9 +113,6 @@ export default function App() {
 
         {/* Amenities & High-End Specifications */}
         <Amenities currentLang={currentLang} theme={theme} />
-
-        {/* Location & Athens Insider Guide */}
-        <LocationGuide currentLang={currentLang} theme={theme} />
 
         {/* Direct Host Booking Card & Inquiry Helper */}
         <DirectBookingCard currentLang={currentLang} theme={theme} />

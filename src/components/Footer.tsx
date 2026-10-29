@@ -89,7 +89,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
               </li>
               <li>
                 <a href="#host" className="hover:underline underline-offset-4">
-                  Host Nitsopa & Direct Inquiry
+                  Host NITSOPA 369 & Direct Inquiry
                 </a>
               </li>
               <li>
@@ -131,8 +131,10 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
             </div>
 
             <div className="pt-2 text-xs space-y-1">
-              <p className="font-semibold text-current">Direct Concierge (Nitsopa):</p>
-              <p className="font-mono">Τηλ.: <a href={`tel:${PROPERTY_CONFIG.hostPhoneRaw}`} className="hover:underline">{PROPERTY_CONFIG.hostPhone}</a></p>
+              <p className="font-semibold text-current">Direct Concierge (NITSOPA 369):</p>
+              <p className="font-mono">
+                Τηλ.: <a href={`tel:${PROPERTY_CONFIG.hostPhoneRaw}`} className="hover:underline font-semibold">{PROPERTY_CONFIG.hostPhone}</a> · <a href={`tel:${PROPERTY_CONFIG.hostPhoneSecondaryRaw}`} className="hover:underline">{PROPERTY_CONFIG.hostPhoneSecondary}</a>
+              </p>
               <p className="font-mono">What’s app: <a href={`https://wa.me/${PROPERTY_CONFIG.hostWhatsapp}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-[#25D366]">{PROPERTY_CONFIG.hostWhatsappDisplay}</a></p>
               <p className="font-mono">Email: <a href={`mailto:${PROPERTY_CONFIG.hostEmail}`} className="hover:underline">{PROPERTY_CONFIG.hostEmail}</a></p>
             </div>
@@ -148,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onLanguageChange, t
               href={`mailto:manosexperience@gmail.com?subject=${encodeURIComponent(
                 'Θέλω ενημέρωση για δημιουργία παρόμοιας ιστοσελίδας'
               )}&body=${encodeURIComponent(
-                'Γεια σου Μάνο, ενδιαφέρομαι να με ενημερώσεις για την δημιουργία (παρόμοιας) ιστοσελίδας, τον χρόνο παράδοσης και το κόστος της. Ευχαριστώ, αναμένω επικοινωνία σου!'
+                'Γεια σου Μάνο, ενδιαφέρομαι να με ενημερώσεις για την δημιουργία (παρόμοιας) ιστοσελίδας, τον χρόνο παράδοσης και το κόστος της. Ευχαριστώ, αναμένω επικοινωνία σου! Μπορείς να μου γράψεις και μιλάω τις εξής γλώσσες: Ελληνικά, Γερμανικά και Αγγλικά. Du kannst mir schreiben und ich spreche folgende Sprachen: Griechisch, Deutsch und Englisch. You can write to me, and I speak the following languages: Greek, German, and English.'
               )}`}
               className={`font-medium hover:underline underline-offset-2 transition-colors ${
                 theme === 'dark' ? 'text-[#D4AF37] hover:text-amber-200' : 'text-[#9E8058] hover:text-stone-900'

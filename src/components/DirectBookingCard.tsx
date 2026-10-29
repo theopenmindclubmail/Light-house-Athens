@@ -69,36 +69,36 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
     const notes = inquiry.customNotes.trim() ? ` Notes: "${inquiry.customNotes.trim()}"` : '';
 
     if (currentLang === 'GR') {
-      return `Γεια σας Nitsopa! Ενδιαφέρομαι για απευθείας κράτηση στο House of light! στην Αθήνα από ${formattedIn} έως ${formattedOut} για ${guests} ${
+      return `Γεια σας NITSOPA 369! Ενδιαφέρομαι για απευθείας κράτηση στο House of light! στην Αθήνα από ${formattedIn} έως ${formattedOut} για ${guests} ${
         guests === 1 ? 'άτομο' : 'άτομα'
       }${purposeText}.${notes} Ειναι διαθέσιμες αυτές οι ημερομηνίες; Σας ευχαριστώ πολύ!`;
     }
 
     if (currentLang === 'DE') {
-      return `Hallo Nitsopa! Ich interessiere mich für eine Direktbuchung im House of light! in Athen vom ${formattedIn} bis ${formattedOut} für ${guests} ${
+      return `Hallo NITSOPA 369! Ich interessiere mich für eine Direktbuchung im House of light! in Athen vom ${formattedIn} bis ${formattedOut} für ${guests} ${
         guests === 1 ? 'Gast' : 'Gäste'
       }${purposeText}.${notes} Sind diese Daten verfügbar? Vielen Dank!`;
     }
 
     if (currentLang === 'IT') {
-      return `Ciao Nitsopa! Sarei interessato a prenotare House of light! ad Atene dal ${formattedIn} al ${formattedOut} per ${guests} ${
+      return `Ciao NITSOPA 369! Sarei interessato a prenotare House of light! ad Atene dal ${formattedIn} al ${formattedOut} per ${guests} ${
         guests === 1 ? 'ospite' : 'ospiti'
       }${purposeText}.${notes} Le date sono disponibili? Grazie mille!`;
     }
 
     if (currentLang === 'ES') {
-      return `¡Hola Nitsopa! Me gustaría consultar la disponibilidad de reserva directa en House of light! en Atenas del ${formattedIn} al ${formattedOut} para ${guests} ${
+      return `¡Hola NITSOPA 369! Me gustaría consultar la disponibilidad de reserva directa en House of light! en Atenas del ${formattedIn} al ${formattedOut} para ${guests} ${
         guests === 1 ? 'huésped' : 'huéspedes'
       }${purposeText}.${notes} ¿Están disponibles estas fechas? ¡Muchas gracias!`;
     }
 
     if (currentLang === 'FR') {
-      return `Bonjour Nitsopa ! Je souhaite réserver en direct le House of light! à Athènes du ${formattedIn} au ${formattedOut} pour ${guests} ${
+      return `Bonjour NITSOPA 369 ! Je souhaite réserver en direct le House of light! à Athènes du ${formattedIn} au ${formattedOut} pour ${guests} ${
         guests === 1 ? 'personne' : 'personnes'
       }${purposeText}.${notes} Ces dates sont-elles disponibles ? Merci d'avance !`;
     }
 
-    return `Hello Nitsopa! I am interested in booking House of light! in Athens from ${formattedIn} to ${formattedOut} for ${guests} ${
+    return `Hello NITSOPA 369! I am interested in booking House of light! in Athens from ${formattedIn} to ${formattedOut} for ${guests} ${
       guests === 1 ? 'guest' : 'guests'
     }${purposeText}.${notes} Are these dates available? Best regards!`;
   };
@@ -319,12 +319,21 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-stone-500 font-medium">Τηλ. / Phone:</span>
-                    <a
-                      href={`tel:${PROPERTY_CONFIG.hostPhoneRaw}`}
-                      className="font-mono font-semibold text-current hover:underline"
-                    >
-                      {PROPERTY_CONFIG.hostPhone}
-                    </a>
+                    <div className="flex items-center gap-1.5 font-mono font-semibold text-current">
+                      <a
+                        href={`tel:${PROPERTY_CONFIG.hostPhoneRaw}`}
+                        className="hover:underline"
+                      >
+                        {PROPERTY_CONFIG.hostPhone}
+                      </a>
+                      <span className="opacity-40">·</span>
+                      <a
+                        href={`tel:${PROPERTY_CONFIG.hostPhoneSecondaryRaw}`}
+                        className="hover:underline opacity-90"
+                      >
+                        {PROPERTY_CONFIG.hostPhoneSecondary}
+                      </a>
+                    </div>
                   </div>
 
                   <div className="flex items-center justify-between gap-2">
@@ -362,7 +371,7 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
                   }`}
                 >
                   <Phone className="w-4 h-4" />
-                  <span>{t.callButton} ({PROPERTY_CONFIG.hostPhone})</span>
+                  <span>{t.callButton} ({PROPERTY_CONFIG.hostPhone} · {PROPERTY_CONFIG.hostPhoneSecondary})</span>
                 </a>
 
                 <a

@@ -16,8 +16,8 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, theme, onOpenInquiry })
 
   const defaultWhatsappMsg = encodeURIComponent(
     currentLang === 'GR'
-      ? 'Γεια σας Nitsopa! Ενδιαφέρομαι για διαμονή στο House of light! στην Αθήνα. Θα ήθελα να ενημερωθώ για διαθεσιμότητα.'
-      : 'Hello Nitsopa! I am interested in staying at House of light! in Athens. Could you please share availability?'
+      ? 'Γεια σας NITSOPA 369! Ενδιαφέρομαι για διαμονή στο House of light! στην Αθήνα. Θα ήθελα να ενημερωθώ για διαθεσιμότητα.'
+      : 'Hello NITSOPA 369! I am interested in staying at House of light! in Athens. Could you please share availability?'
   );
 
   return (

@@ -108,18 +108,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {t.amenities}
               </a>
               <a
-                href="#location"
-                className={`whitespace-nowrap shrink-0 transition-colors hover:underline underline-offset-8 decoration-1 ${
-                  isScrolled
-                    ? theme === 'dark'
-                      ? 'text-[#A1A1AA] hover:text-white decoration-[#D4AF37]'
-                      : 'text-[#78716C] hover:text-[#1C1917] decoration-[#C5A880]'
-                    : 'text-white/85 hover:text-white decoration-white/70'
-                }`}
-              >
-                {t.location}
-              </a>
-              <a
                 href="#host"
                 className={`whitespace-nowrap shrink-0 transition-colors hover:underline underline-offset-8 decoration-1 ${
                   isScrolled
@@ -288,13 +276,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="py-1 hover:opacity-75 transition-opacity"
               >
                 {t.amenities}
-              </a>
-              <a
-                href="#location"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="py-1 hover:opacity-75 transition-opacity"
-              >
-                {t.location}
               </a>
               <a
                 href="#host"

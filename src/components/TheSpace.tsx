@@ -13,12 +13,36 @@ export const TheSpace: React.FC<TheSpaceProps> = ({ currentLang, theme }) => {
   const t = translations[currentLang].space;
 
   const specsList = [
-    { icon: Maximize2, label: t.statArea, value: PROPERTY_CONFIG.specs.area },
-    { icon: Users, label: t.statGuests, value: `Max ${PROPERTY_CONFIG.specs.guestsMax}` },
-    { icon: Bed, label: t.statBedrooms, value: PROPERTY_CONFIG.specs.beds },
-    { icon: Bath, label: t.statBath, value: `${PROPERTY_CONFIG.specs.baths} Marble Bathroom` },
-    { icon: Wifi, label: t.statWifi, value: PROPERTY_CONFIG.specs.wifiSpeed },
-    { icon: Sun, label: t.statFloor, value: PROPERTY_CONFIG.specs.balcony },
+    {
+      icon: Maximize2,
+      label: currentLang === 'GR' ? 'ΕΠΙΦΑΝΕΙΑ' : 'Area',
+      value: t.statArea,
+    },
+    {
+      icon: Users,
+      label: currentLang === 'GR' ? 'ΦΙΛΟΞΕΝΟΥΜΕΝΟΙ' : 'Guests',
+      value: t.statGuests,
+    },
+    {
+      icon: Bed,
+      label: currentLang === 'GR' ? 'ΥΠΝΟΣ' : 'Bedrooms',
+      value: t.statBedrooms,
+    },
+    {
+      icon: Bath,
+      label: currentLang === 'GR' ? 'ΜΠΑΝΙΟ' : 'Bathroom',
+      value: t.statBath,
+    },
+    {
+      icon: Wifi,
+      label: currentLang === 'GR' ? 'ΔΙΑΔΙΚΤΥΟ' : 'Internet',
+      value: t.statWifi,
+    },
+    {
+      icon: Sun,
+      label: currentLang === 'GR' ? 'ΕΞΩΤΕΡΙΚΟΙ ΧΩΡΟΙ' : 'Outdoor',
+      value: t.statFloor,
+    },
   ];
 
   return (
@@ -68,6 +92,7 @@ export const TheSpace: React.FC<TheSpaceProps> = ({ currentLang, theme }) => {
               <p>{t.story1}</p>
               <p>{t.story2}</p>
               <p>{t.story3}</p>
+              {t.story4 && <p>{t.story4}</p>}
             </div>
 
             {/* Curated Architectural Highlights */}

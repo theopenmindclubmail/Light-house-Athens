@@ -21,13 +21,13 @@ export const PROPERTY_CONFIG = {
   },
   specs: {
     area: '70 m² / 753 sq ft',
-    guestsMax: 4,
+    guestsMax: 3,
     bedrooms: 1,
     beds: '1 King Bed (Anatomical) + 1 Queen Comfort Sofa Bed',
     baths: 1,
     floor: '2nd Floor with elevator',
     balcony: 'Sunny private front terrace + Rooftop Solarium access',
-    wifiSpeed: '100+ Mbps Fiber Symmetrical',
+    wifiSpeed: '200+ Mbps Fiber Optic Symmetrical',
   },
 };
 
@@ -173,15 +173,6 @@ export const PROPERTY_PHOTOS: PhotoItem[] = [
     titleKey: 'workspaceTitle',
     descKey: 'workspaceDesc',
     src: '/images/workspace/_DSC4807.jpg',
-    aspectRatio: '3:2',
-    featured: true,
-  },
-  {
-    id: 'rooftop-hammock-relax',
-    category: 'rooftop',
-    titleKey: 'rooftopHammockTitle',
-    descKey: 'rooftopHammockDesc',
-    src: '/images/rooftop/_DAN2030.jpg',
     aspectRatio: '3:2',
     featured: true,
   },

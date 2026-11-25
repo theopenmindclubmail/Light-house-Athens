@@ -205,12 +205,12 @@ const FAQ_ITEMS: FAQItem[] = [
       FR: 'Quelle est la vitesse du WiFi pour le télétravail et les visioconférences ?',
     },
     answer: {
-      GR: 'Το διαμέρισμα διαθέτει αποκλειστική συμμετρική γραμμή οπτικής ίνας 100+ Mbps με μηδενικές διακοπές, ειδικό μασίφ γραφείο εργασίας, εργονομική καρέκλα και πρίζες με θύρες USB.',
-      EN: 'We provide dedicated fiber-optic broadband with 100+ Mbps symmetrical speed, low latency, and zero dropouts. The apartment features a dedicated timber work desk, ergonomic chair, and power strips.',
-      DE: 'Die Wohnung verfügt über einen dedizierten Glasfaseranschluss mit über 100 Mbit/s symmetrischer Geschwindigkeit, einen Schreibtisch und einen ergonomischen Stuhl.',
-      IT: 'Offriamo una linea in fibra ottica dedicata a 100+ Mbps simmetrici a bassissima latenza, una solida scrivania in legno e sedia ergonomica.',
-      ES: 'Disponemos de fibra óptica simétrica de 100+ Mbps de alta velocidad, escritorio de madera maciza, silla ergonómica y conexiones USB.',
-      FR: 'Nous offrons une connexion fibre optique dédiée de plus de 100 Mbps symétriques, un bureau en bois massif et une chaise ergonomique.',
+      GR: 'Το διαμέρισμα διαθέτει αποκλειστική συμμετρική γραμμή οπτικής ίνας 200+ Mbps με μηδενικές διακοπές, ειδικό μασίφ γραφείο εργασίας, εργονομική καρέκλα και πρίζες με θύρες USB.',
+      EN: 'We provide dedicated fiber-optic broadband with 200+ Mbps symmetrical speed, low latency, and zero dropouts. The apartment features a dedicated timber work desk, ergonomic chair, and power strips.',
+      DE: 'Die Wohnung verfügt über einen dedizierten Glasfaseranschluss mit über 200 Mbit/s symmetrischer Geschwindigkeit, einen Schreibtisch und einen ergonomischen Stuhl.',
+      IT: 'Offriamo una linea in fibra ottica dedicata a 200+ Mbps simmetrici a bassissima latenza, una solida scrivania in legno e sedia ergonomica.',
+      ES: 'Disponemos de fibra óptica simétrica de 200+ Mbps de alta velocidad, escritorio de madera maciza, silla ergonómica y conexiones USB.',
+      FR: 'Nous offrons une connexion fibre optique dédiée de plus de 200 Mbps symétriques, un bureau en bois massif et une chaise ergonomique.',
     },
   },
   {

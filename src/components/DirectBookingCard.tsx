@@ -508,8 +508,7 @@ export const DirectBookingCard: React.FC<DirectBookingCardProps> = ({ currentLan
                     >
                       <option value={1}>1 {currentLang === 'GR' ? 'Ατομο' : 'Guest'}</option>
                       <option value={2}>2 {currentLang === 'GR' ? 'Ατομα (Ζευγάρι / Συνεργάτες)' : 'Guests (Couple / Duo)'}</option>
-                      <option value={3}>3 {currentLang === 'GR' ? 'Ατομα (King + Καναπές)' : 'Guests (King + Sofa)'}</option>
-                      <option value={4}>4 {currentLang === 'GR' ? 'Ατομα (Μέγιστος Αριθμός)' : 'Guests (Max Capacity)'}</option>
+                      <option value={3}>3 {currentLang === 'GR' ? 'Ατομα (Μέγιστος Αριθμός)' : 'Guests (Max Capacity)'}</option>
                     </select>
                   </div>
 

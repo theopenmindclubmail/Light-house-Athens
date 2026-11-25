@@ -124,9 +124,14 @@ export const Amenities: React.FC<AmenitiesProps> = ({ currentLang, theme }) => {
                 {section.items.map((item, itemIdx) => {
                   const Icon = item.icon;
                   return (
-                    <div key={itemIdx} className="flex items-start gap-4">
+                    <div
+                      key={itemIdx}
+                      className={`flex ${item.desc ? 'items-start' : 'items-center'} gap-4`}
+                    >
                       <div
-                        className={`w-9 h-9 rounded-md flex items-center justify-center shrink-0 mt-0.5 ${
+                        className={`w-9 h-9 rounded-md flex items-center justify-center shrink-0 ${
+                          item.desc ? 'mt-0.5' : ''
+                        } ${
                           item.highlight
                             ? theme === 'dark'
                               ? 'bg-[#2E2E33] text-[#D4AF37]'
@@ -157,13 +162,15 @@ export const Amenities: React.FC<AmenitiesProps> = ({ currentLang, theme }) => {
                             </span>
                           )}
                         </div>
-                        <p
-                          className={`text-xs sm:text-sm mt-1 leading-relaxed ${
-                            theme === 'dark' ? 'text-[#A1A1AA]' : 'text-[#78716C]'
-                          }`}
-                        >
-                          {item.desc}
-                        </p>
+                        {item.desc && (
+                          <p
+                            className={`text-xs sm:text-sm mt-1 leading-relaxed ${
+                              theme === 'dark' ? 'text-[#A1A1AA]' : 'text-[#78716C]'
+                            }`}
+                          >
+                            {item.desc}
+                          </p>
+                        )}
                       </div>
                     </div>
                   );
